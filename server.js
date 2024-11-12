@@ -32,7 +32,7 @@ app.use("/api/v1",productRoute)
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 // });
-const buildPath = path.join(__dirname, "client", "build");
+const buildPath = path.join(__dirname, "", "build");
 app.use(express.static(buildPath));
 
 app.get("*", (req, res) => {
