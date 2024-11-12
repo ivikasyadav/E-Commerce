@@ -7,7 +7,12 @@ const categoryRoute=require('./route/categoryRoute')
 const productRoute=require("./route/productroute")
 const path = require('path');
 
-const cors=require("cors")
+// const cors=require("cors")
+app.use(cors({
+  origin: 'https://yourfrontenddomain.com', // Change this to your frontend domain
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
+}));
 
 dotenv.config()
 ConnectDB()
