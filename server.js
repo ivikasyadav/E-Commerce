@@ -5,7 +5,7 @@ const dotenv=require("dotenv")
 const userRoute=require("./route/userRoute")
 const categoryRoute=require('./route/categoryRoute')
 const productRoute=require("./route/productroute")
-const path=require("path")
+const path = require('path');
 
 const cors=require("cors")
 
@@ -22,7 +22,8 @@ app.use("/api/v1",categoryRoute)
 app.use("/api/v1",productRoute)
 
 
-app.use(express.static(path.join(__dirname,"./client/build")))
+// app.use(express.static(path.join(__dirname,"./client/build")))
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get("*",function(req,res){
     res.sendFile(path.join(__dirname,"./client/build/index.html"))
