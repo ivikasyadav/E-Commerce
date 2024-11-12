@@ -2,7 +2,8 @@ const express=require("express")
 const router=express.Router()
 const mongoose=require("mongoose")
 const userModel=require("../model/userModel")
-const bcrypt=require("bcrypt")
+// const bcrypt=require("bcrypt")
+const bcrypt = require('bcryptjs');
 const JWT=require("jsonwebtoken")
 const { signin, isAdmin } = require("../middleware/middleware")
 
