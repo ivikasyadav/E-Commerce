@@ -20,7 +20,7 @@ app.use(cors({
 dotenv.config()
 ConnectDB()
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
 app.get("/home",(req,res)=>{
     res.send("Welcome to home page")
